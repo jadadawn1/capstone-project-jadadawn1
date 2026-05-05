@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+# Project Omnia
+
+## Deployment & CI/CD
+
+This project uses GitHub Actions to deploy to Google Cloud Run. On every push to `main`, the workflow in `.github/workflows/deploy.yml` will:
+- Install dependencies for backend and frontend
+- Build the frontend
+- Deploy to Cloud Run using secrets
+
+### Required GitHub Secrets
+- `GCP_SA_KEY`: Google Cloud service account key (JSON)
+- `GCP_PROJECT_ID`: GCP project ID
+- `GCP_REGION`: GCP region (e.g., us-central1)
+- `MONGO_URI`: MongoDB connection string
+- `JWT_SECRET`: JWT secret for authentication
+
+
+### Local Development
+1. Copy `.env.example` to `.env` and fill in your values.
+2. Install dependencies:
+	- In `backend`: `npm install`
+	- In `frontend`: `npm install`
+3. Start the backend server:
+	- `cd backend`
+	- `node index.js` (or `npm start` if you add a start script)
+4. Start the frontend dev server:
+	- `cd frontend`
+	- `npm run dev`
+5. Visit [http://localhost:5173/](http://localhost:5173/) in your browser.
+
+### Deployment
+1. Push your code to the `main` branch on GitHub.
+2. The GitHub Actions workflow will build and deploy your app to Google Cloud Run automatically.
+3. Make sure all required secrets are set in your GitHub repo settings.
+
+---
+
+## Diagrams
+
+### Entity Relationship Diagram (ERD)
+_Insert your ERD here (e.g., export from dbdiagram.io or draw.io)_
+
+### JWT Authentication Sequence Diagram
+_Insert your sequence diagram here (e.g., export from sequence diagram tool)_
+
+---
+
+## AI Log & Critique
+
+### AI Log
+_Attach your AI prompt/response log as a PDF or text file._
+
+### Critique
+_Write a brief critique highlighting at least two instances where the AI generated flawed, insecure, or inefficient code, and explain how you identified and fixed those issues._
+
+---
+=======
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/8VwtvYYd)
+# cis329-capstone
+This the CCIS329 Capstone Project
+
+
+### [Click here for more information](https://docs.google.com/document/d/1F-kUWrd4647zfHymqqP6i9s5z4Xfk5l3nyj_dUKw_Gg/edit?usp=sharing)
+>>>>>>> 93accca4dc86f0de34b2928a8dd7d36ea83078cb
