@@ -19,7 +19,6 @@ jobs:
 
       - name: Install dependencies (backend)
         run: |
-          cd backend
           npm install
 
       - name: Install dependencies (frontend)
