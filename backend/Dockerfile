@@ -16,3 +16,6 @@ EXPOSE 4000
 
 # Start the server
 CMD ["npm", "start"]
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/backend', '-f', 'backend/Dockerfile', '.']
